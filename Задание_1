@@ -1,0 +1,53 @@
+using System;
+
+namespace ЗАДАНИЕ_1
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Уравнение такого типа: ax^2+bx+c=0|");
+            Console.WriteLine("==================================|");
+
+            Console.WriteLine("Введите число - a:");
+            double ValueA = double.Parse(Console.ReadLine());
+            if (ValueA == 0)
+            {
+                while (ValueA == 0)
+                {
+                    Console.WriteLine("Коэффициент не может быть равен нулю\nВведите новое значение:");
+                    ValueA = double.Parse(Console.ReadLine());
+                }
+
+            }
+            Console.WriteLine("============================================|");
+
+            Console.WriteLine("Введите число - b:");
+            double ValueB = double.Parse(Console.ReadLine());
+            Console.WriteLine("============================================|");
+
+            Console.WriteLine("Введите число - с:");
+            double ValueC = double.Parse(Console.ReadLine());
+            Console.WriteLine("============================================|");
+            Console.WriteLine("Приступаем к действиям");
+            Console.WriteLine("============================================|");
+
+
+            double D = Math.Sqrt(Math.Pow(ValueB, 2) - 4 * ValueA * ValueC);
+
+            double x1 = -ValueB + D / 2 * ValueA;
+            Console.WriteLine($"Перывый корень равен {x1}");
+
+            Console.WriteLine("============================================|");
+
+            double x2 = -ValueB - D / 2 * ValueA;
+            Console.WriteLine($"Второй корень равен {x2}");
+            Console.WriteLine("============================================|");
+
+        }
+
+    }
+
+
+}
